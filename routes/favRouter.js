@@ -29,7 +29,8 @@ FavoritesRouter.route('/')
     fav.postedBy=req.decoded._doc._id;
     console.log("New Fav object has been created");
     }
-    fav.dishes.push(req.body);
+    Favorites.update({postedBy:req.decoded._doc._id}, {$addToSet: {dishes: req.body}})
+    //fav.dishes.push(req.body);
     fav.save(function (err, result) {
         if (err) throw err;
         res.json(result);
