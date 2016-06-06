@@ -1,6 +1,6 @@
 # rest-server
 
-Nodejs App provide back-end server for testing.
+Nodejs App provide back-end restful server.
 
 ### Version
 1.0
@@ -51,3 +51,7 @@ $ npm start
 Connected correctly to server
 
 ```
+
+* to start using app you can use [postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+
+    then start register user by http://localhost:3000/users/register
